@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRUDS Operations Pure JavaScript</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Permanent+Marker&family=Roboto:wght@400;500;700;900&display=swap"
+        rel="stylesheet">
+
+</head>
+
+<body>
+    <div class="cruds">
+
+        <div class="head">
+            <h2>cruds</h2>
+            <p>Product management system</p>
+        </div>
+
+        <div class="input">
+
+            <input type="text" id="title" placeholder="Title">
+
+            <div class="price">
+                <input oninput="getTotal()" min="0" type="number" id="price" placeholder="Price">
+                <input oninput="getTotal()" min="0" type="number" id="taxes" placeholder="Taxes">
+                <input oninput="getTotal()" min="0" type="number" id="ads" placeholder="Ads">
+                <input oninput="getTotal()" min="0" type="number" id="discount" placeholder="Discount %">
+                <span id="total">0</span>
+            </div>
+            <input min="1" max="100" type="number" id="count" placeholder="Count">
+            <input type="text" id="category" placeholder="Category">
+            <button id="create">Create</button>
+        </div>
+        <div class="output">
+
+            <div class="search-block">
+                <input onkeyup="searchData(this.value)" type="text" id="search" placeholder="🔎 Search">
+                <div class="btn-search">
+                    <button onclick="getSearchMood(this.id)" id="searchTitle">Search By Title</button>
+                    <button onclick="getSearchMood(this.id)" id="searchCategory">Search By Category</button>
+                </div>
+            </div>
+
+            <div id="delete-all"></div>
+
+            <table>
+                <tr>
+                    <th>id</th>
+                    <th>title</th>
+                    <th>price</th>
+                    <th>taxes</th>
+                    <th>ads</th>
+                    <th>discount</th>
+                    <th>total</th>
+                    <th>category</th>
+                    <th>update</th>
+                    <th>delete</th>
+                </tr>
+                <tbody id="tbody">
+                    <!-- <tr>
+                        <td>1</td>
+                        <td>samsung</td>
+                        <td>2500</td>
+                        <td>100</td>
+                        <td>10</td>
+                        <td>0</td>
+                        <td>2</td>
+                        <td>phone</td>
+                        <td><button id="update">update</button></td>
+                        <td><button id="delete">delete</button></td>
+                    </tr> -->
+
+
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+
+    <script src="main.js"></script>
+</body>
+
+</html>

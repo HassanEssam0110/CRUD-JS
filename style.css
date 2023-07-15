@@ -1,0 +1,191 @@
+:root {
+  --main-bg-color: #000137;
+  --main-color: #ffe45c;
+  --second-color: #3f76bf;
+  --white-color: #fff;
+  --red-color: #da2828;
+  --green-color: #2d8b4e;
+}
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--main-bg-color);
+  font-family: "Roboto", Arial, Helvetica, sans-serif;
+  color: var(--white-color);
+  caret-color: var(--second-color);
+  user-select: none;
+}
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+}
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--second-color);
+  border-radius: 2px;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--main-color);
+}
+.cruds {
+  width: 80%;
+  margin: auto;
+}
+.head {
+  margin: 40px 0;
+  padding: 5px;
+  text-align: center;
+  border: 1px solid var(--second-color);
+  box-shadow: 0 0 6px var(--second-color);
+  background-color: rgba(255, 255, 255, 0.09);
+  border-radius: 30px;
+}
+.head h2 {
+  font-family: "Permanent Marker";
+  font-size: 40px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  color: var(--main-color);
+}
+.head p {
+  font-size: 25px;
+  margin-top: 5px;
+  text-transform: capitalize;
+  color: var(--white-color);
+}
+
+input {
+  width: 100%;
+  height: 50px;
+  margin: 5px 0;
+  padding: 5px 10px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: none;
+  outline: none;
+  background-color: #02032c;
+  color: var(--white-color);
+}
+input::placeholder {
+  color: var(--main-color);
+  transition: 0.3s;
+}
+
+input:focus:not(#search)::placeholder {
+  opacity: 0;
+}
+input:focus {
+  outline: 2px solid var(--second-color);
+  background-color: #020216;
+}
+.price input {
+  width: 20%;
+}
+#total {
+  display: inline-block;
+  background-color: var(--red-color);
+  padding: 5px 10px;
+  height: 100%;
+  text-align: center;
+  border-radius: 6px;
+  margin: 5px 0 5px 5px;
+  transition: 0.3s;
+}
+#total::before {
+  content: "Total: ";
+}
+.input button,
+.search-block button,
+#delete-all button {
+  width: 100%;
+  height: 50px;
+  margin: 10px 0;
+  border: 1px solid var(--main-color);
+  border-radius: 30px;
+  cursor: pointer;
+  background-color: transparent;
+  color: var(--main-color);
+  transition: 0.5s;
+  text-transform: uppercase;
+}
+.input button:hover,
+.search-block button:hover {
+  background-color: var(--main-color);
+  color: var(--main-bg-color);
+  letter-spacing: 2px;
+}
+.btn-search {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.btn-search button {
+  width: 45%;
+}
+
+#delete-all button {
+  border: 1px solid var(--red-color);
+  color: var(--red-color);
+}
+#delete-all button:hover {
+  background-color: var(--red-color);
+  color: var(--main-bg-color);
+  letter-spacing: 2px;
+}
+table {
+  width: 100%;
+  text-align: center;
+  margin: 15px auto;
+}
+table th {
+  text-transform: uppercase;
+  box-shadow: 0 0 3px var(--second-color);
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 10px 0 10px 0;
+}
+th,
+td {
+  padding: 5px;
+}
+td {
+  border-bottom: 1px solid hsla(50, 100%, 68%, 0.2);
+}
+
+table button {
+  color: var(--white-color);
+  cursor: pointer;
+  border: none;
+  outline: none;
+  padding: 4px 5px;
+  border-radius: 5px;
+  text-transform: capitalize;
+}
+table button#update {
+  background-color: var(--green-color);
+}
+table button#delete {
+  background-color: var(--red-color);
+}
+table button:hover {
+  transform: scale(1.05);
+}
+.input .update-btn {
+  font-weight: bold;
+  color: var(--green-color);
+  border-color: var(--green-color);
+}
+.input .update-btn:hover {
+  background-color: var(--green-color);
+  color: var(--main-bg-color);
+}
